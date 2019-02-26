@@ -1,9 +1,23 @@
-<view class='cu-custom' style="height:{{CustomBar}}px;">
+<!-- <view class='cu-custom' style="height:{{CustomBar}}px;">
   <view class="cu-bar fixed bg-gradual-blue" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
     <view class='content'>ColorUI 空白模板</view>
   </view>
+</view> -->
+<image src='/images/componentBg.png' mode='widthFix' class='response'></image>
+
+<view class='box'>
+  <view class="cu-bar search bg-white">
+    <view class='search-form round'>
+      <text class="icon-search"></text>
+      <input type="text" placeholder="问题" confirm-type="search"></input>
+    </view>
+    <view class='action'>
+      <button class='cu-btn bg-black shadow-blur round'>回答</button>
+    </view>
+  </view>
+
 </view>
-<view class="margin-xl padding-xl bg-white radius shadow-lg">
+<!-- <view class="margin-xl padding-xl bg-white radius shadow-lg">
   <view class="flex justify-center">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
     <block wx:else>
@@ -17,4 +31,4 @@
 
 <view class="text-center margin-top">
   <text class="text-grey text-xl">{{motto}}</text>
-</view>
+</view> -->
