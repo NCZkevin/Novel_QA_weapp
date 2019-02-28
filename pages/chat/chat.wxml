@@ -1,6 +1,6 @@
 <view class="cu-custom" style="height:{{CustomBar}}px;">
   <view class="cu-bar fixed bg-gradual-pink" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
-    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+    <navigator class='action' open-type="switchTab" delta="1" hover-class="none" url="/pages/index/index">
       <text class='icon-back'></text>
       聊天
     </navigator>

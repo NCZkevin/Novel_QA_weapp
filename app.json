@@ -10,9 +10,7 @@
     "navigationStyle": "custom",
     "navigationBarTextStyle": "white"
   },
-  "usingComponents": {},
   "tabBar": {
-    "custom": true,
     "color": "#aaa",
     "selectedColor": "#39b54a",
     "borderStyle": "black",

@@ -17,6 +17,141 @@
   </view>
 
 </view>
+
+<!-- <view class="cu-card article">
+  <view wx:for="1" wx:key class="cu-item shadow text-center answer td">
+    <view class="title">答案</view>
+    <view class="content">
+      <view class="desc">
+        <view class='text-content td'> 为了给自己的程序凑字数瞎几把乱写的一堆文字，了解一下就OK！ヾ(=･ω･=)o</view>
+      </view>
+    </view>
+  </view>
+</view> -->
+
+<view class="cu-card article">
+  <view class="cu-item shadow text-center td answer-item">
+    <!-- <view class="title">答案</view> -->
+    <!-- <view class='an-text'>为了给自己的程序凑字数瞎几把乱写的一堆文字，了解一下就OK！ヾ(=･ω･=)o</view> -->
+      <view class='an-text'>孙悟空师傅唐僧</view>
+  </view>
+</view>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class='action'>
+    <text class='icon-titles text-orange '></text> 实体列表
+  </view>
+</view>
+<view class="cu-card article flex">
+      <!-- <view class="flex">
+      <view class='flex-sub padding-sm margin-xs radius'>
+        <view wx:for="1" wx:key class="cu-item shadow">
+          <view class="title">唐僧</view>
+          <view class="content">
+            <view class="desc">
+              <view class='text-content'> 为了给自己的程序凑字数瞎几把乱写的一堆文字，了解一下就OK！ヾ(=･ω･=)o</view>
+              <view>
+                <view class='cu-tag bg-red light sm round'>神话</view>
+                <view class='cu-tag bg-green light sm round'>西游记</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='flex-sub padding-sm margin-xs radius'>
+        <view wx:for="1" wx:key class="cu-item shadow">
+          <view class="title">唐僧</view>
+          <view class="content">
+            <view class="desc">
+              <view class='text-content'> 为了给自己的程序凑字数瞎几把乱写的一堆文字，了解一下就OK！ヾ(=･ω･=)o</view>
+              <view>
+                <view class='cu-tag bg-red light sm round'>神话</view>
+                <view class='cu-tag bg-green light sm round'>西游记</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view> -->
+
+
+    <!-- <view wx:for="1" wx:key class="cu-item shadow flex-sub enity-item">
+      <view class="title">孙悟空</view>
+      <view class="content">
+        <view class="desc">
+        <view class='text-content'> 为了给自己的程序凑字数瞎几把乱写的一堆文字，了解一下就OK！ヾ(=･ω･=)o</view>
+        <view>
+          <view class='cu-tag bg-red light sm round'>神话</view>
+          <view class='cu-tag bg-green light sm round'>西游记</view>
+        </view>
+      </view>
+    </view>
+    </view>  
+
+    <view wx:for="1" wx:key class="cu-item shadow flex-sub enity-item">
+      <view class="title">孙悟空</view>
+      <view class="content">
+        <view class="desc">
+        <view class='text-content'> 为了给自己的程序凑字数瞎几把乱写的一堆文字，了解一下就OK！ヾ(=･ω･=)o</view>
+        <view>
+          <view class='cu-tag bg-red light sm round'>神话</view>
+          <view class='cu-tag bg-green light sm round'>西游记</view>
+        </view>
+      </view>
+    </view>
+    </view> -->
+
+  <view class='nav-list' style='margin:20rpx 0;'>
+    <view  hover-class='none' bindtap="showModal" data-target="Modal" data-title="{{item.title}}" class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key>
+      <!-- <view class="nav-title">{{item.title}}</view> -->
+      <view class='nav-desc'>{{item.title}}</view>
+      <!-- <view class="nav-name">{{item.name}}</view> -->
+      <!-- <text class='icon-{{item.icon}}'></text> -->
+
+    </view>
+  </view>
+
+  <!-- <view class="cu-bar bg-white">
+    <view class='action'>
+      <text class='icon-title text-orange '></text> 模态窗口
+    </view>
+    <view class='action'>
+      <button class='cu-btn bg-green shadow' bindtap="showModal" data-target="Modal">Modal</button>
+    </view>
+  </view> -->
+  <view class="cu-modal {{modalName=='Modal'?'show':''}}">
+    <view class="cu-dialog">
+      <view class="cu-bar bg-white justify-end">
+        <view class='content'>{{enity.name}}</view>
+        <view class='action' bindtap='hideModal'>
+          <text class='icon-close text-red'></text>
+        </view>
+      </view>
+      <view class='padding-xl'>
+        {{enity.name}}
+      </view>
+    </view>
+  </view>
+
+
+</view>
+
+
+  <!-- <view class="padding bg-white">
+    <view class="flex">
+      <view class='flex-sub bg-grey padding-sm margin-xs radius'>1</view>
+      <view class='flex-sub bg-grey padding-sm margin-xs radius'>1</view>
+    </view>
+    <view class="flex  p-xs margin-bottom-sm mb-sm">
+      <view class='flex-sub bg-grey padding-sm margin-xs radius'>1</view>
+      <view class='flex-twice bg-grey padding-sm margin-xs radius'>2</view>
+    </view>
+    <view class="flex  p-xs margin-bottom-sm mb-sm">
+      <view class='flex-sub bg-grey padding-sm margin-xs radius'>1</view>
+      <view class='flex-twice bg-grey padding-sm margin-xs radius'>2</view>
+      <view class='flex-treble bg-grey padding-sm margin-xs radius'>3</view>
+    </view>
+  </view> -->
 <!-- <view class="margin-xl padding-xl bg-white radius shadow-lg">
   <view class="flex justify-center">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>

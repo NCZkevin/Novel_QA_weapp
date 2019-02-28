@@ -5,3 +5,45 @@
 .box view.cu-bar {
   margin-top: 20rpx; 
 }
+
+.answer {
+  min-height: 500rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-content {
+  font-size:28rpx;
+  color:#888;
+  height:4.8em;
+  overflow:hidden;
+}
+
+.cu-card.article>.answer-item {
+  padding-bottom: 0rpx;
+}
+
+.an-text {
+  font-size:30rpx;
+  font-weight:900;
+  word-wrap:normal;
+  text-overflow:ellipsis;
+  color:#333;
+  line-height:50rpx;
+  padding:60rpx 30rpx;
+}
+
+.enity-item {
+  width: 42%;
+  display: inline-block !important;
+}
+
+.nav-desc {
+  text-align: center;
+}

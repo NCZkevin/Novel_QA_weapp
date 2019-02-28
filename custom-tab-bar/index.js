@@ -5,13 +5,13 @@ Component({
   data: {
     selected: 0,
     list: [{
-        pagePath: "pages/index/index",
+        pagePath: "../index/index",
         iconPath: "/images/tabbar/basics.png",
         selectedIconPath: "/images/tabbar/basics_cur.png",
         text: "问答"
       },
       {
-        pagePath: "pages/chat/index",
+        pagePath: "../chat/chat",
         iconPath: "/images/tabbar/component.png",
         selectedIconPath: "/images/tabbar/component_cur.png",
         text: "聊天"
@@ -19,10 +19,14 @@ Component({
     ]
   },
   methods: {
-    switchTab(e) {      
+    switchTab(e) {
+      const data = e.currentTarget.dataset   
       const url = e.currentTarget.dataset.path
       wx.switchTab({
         url
+      })
+      this.setData({
+        selected: data.index
       })
     }
   },

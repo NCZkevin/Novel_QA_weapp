@@ -9,7 +9,32 @@ Page({
     motto: 'Hi 开发者！',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    elements: [{
+      title: '孙悟空',
+      name: 'layout',
+      color: 'cyan',
+      icon: 'newsfill'
+    },
+    {
+      title: '唐僧',
+      name: 'background',
+      color: 'blue',
+      icon: 'colorlens'
+    },
+    {
+      title: '西游记',
+      name: 'text',
+      color: 'purple',
+      icon: 'font'
+    },
+    {
+      title: '师徒',
+      name: 'icon',
+      color: 'mauve',
+      icon: 'icon'
+    }
+    ],
   },
   //事件处理函数
   bindViewTap: function() {
@@ -45,6 +70,11 @@ Page({
       })
     }
   },
+  isCard(e) {
+    this.setData({
+      isCard: e.detail.value
+    })
+  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -52,5 +82,18 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+  showModal(e) {
+    this.setData({
+      modalName: e.currentTarget.dataset.target,
+      enity: {
+        name: e.currentTarget.dataset.title
+      }
+    })
+  },
+  hideModal(e) {
+    this.setData({
+      modalName: null
+    })
+  },
 })
