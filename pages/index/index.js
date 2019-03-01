@@ -6,34 +6,37 @@ Page({
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
-    motto: 'Hi 开发者！',
+    answer: '',
+    question: '',
+    isShow: true,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    elements: [{
-      title: '孙悟空',
-      name: 'layout',
-      color: 'cyan',
-      icon: 'newsfill'
-    },
-    {
-      title: '唐僧',
-      name: 'background',
-      color: 'blue',
-      icon: 'colorlens'
-    },
-    {
-      title: '西游记',
-      name: 'text',
-      color: 'purple',
-      icon: 'font'
-    },
-    {
-      title: '师徒',
-      name: 'icon',
-      color: 'mauve',
-      icon: 'icon'
-    }
+    elements: [
+    // {
+    //   title: '孙悟空',
+    //   name: 'layout',
+    //   color: 'cyan',
+    //   icon: 'newsfill'
+    // },
+    // {
+    //   title: '唐僧',
+    //   name: 'background',
+    //   color: 'blue',
+    //   icon: 'colorlens'
+    // },
+    // {
+    //   title: '西游记',
+    //   name: 'text',
+    //   color: 'purple',
+    //   icon: 'font'
+    // },
+    // {
+    //   title: '师徒',
+    //   name: 'icon',
+    //   color: 'mauve',
+    //   icon: 'icon'
+    // }
     ],
   },
   //事件处理函数
@@ -96,4 +99,41 @@ Page({
       modalName: null
     })
   },
+  questionInput: function (e) {
+    this.setData({
+      question: e.detail.value
+    })
+  },
+  searchAnswer() {
+    if(this.data.question != ''){
+      var that = this
+      // console.log(this.data.question)
+      wx.request({
+        url: 'http://192.168.3.40:9999/question/',
+        method: 'POST',
+        data: {
+          question: this.data.question
+        },
+        success(res) {
+          // console.log(res.data)
+          // enitylist = []
+          // if(res.data.enity.length > 0){
+          //   for(x in res.data.enity){
+          //     console.log(res.data.enity[x])
+          //     this.enitylist.push({
+          //       title: enity,
+          //       color: 'cyan',
+          //     })
+          //   }
+          // }
+          // console.log(this.enitylist)
+          that.setData({
+            isShow: false,
+            answer: res.data.answer,
+            elements: res.data.elements
+          })
+        }
+      })
+    }
+  }
 })

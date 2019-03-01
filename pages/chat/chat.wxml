@@ -11,36 +11,36 @@
   <view class="cu-item self">
     <view class="main">
       <view class='content bg-green shadow'>
-        <text>喵喵喵！喵喵喵！喵喵喵！喵喵！喵喵！！喵！喵喵喵！</text>
+        <text>西游记的作者是谁？</text>
       </view>
     </view>
     <view class="cu-avatar radius" style="background-image:url(https://image.weilanwl.com/img/square-3.jpg);"></view>
     <view class='date'>2018年3月23日 13:23</view>
   </view>
-  <view class='cu-info round'>对方撤回一条消息!</view>
+  <!-- <view class='cu-info round'>对方撤回一条消息!</view> -->
   <view class="cu-item">
     <view class="cu-avatar radius" style="background-image:url(https://image.weilanwl.com/img/square-2.jpg);"></view>
     <view class="main">
       <view class='content shadow'>
-        <text>喵喵喵！喵喵喵！</text>
+        <text>吴承恩</text>
       </view>
     </view>
     <view class='date '> 13:23</view>
   </view>
-  <view class="cu-info">
+  <!-- <view class="cu-info">
     <text class='icon-roundclosefill text-red '></text> 对方拒绝了你的消息
-  </view>
-  <view  class="cu-info">
+  </view> -->
+  <!-- <view  class="cu-info">
     对方开启了好友验证，你还不是他(她)的好友。请先发送好友验证请求，对方验证通过后，才能聊天。
     <text class='text-blue'>发送好友验证</text>
-  </view>
-  <view class="cu-item self">
+  </view> -->
+  <!-- <view class="cu-item self">
     <view class="main">
       <image src="https://image.weilanwl.com/img/3x4-1.jpg" class='radius' mode="widthFix"></image>
     </view>
     <view class="cu-avatar radius" style="background-image:url(https://image.weilanwl.com/img/square-3.jpg);"></view>
     <view class='date'> 13:23</view>
-  </view>
+  </view> -->
   <view class="cu-item self">
     <view class="main">
       <view class='action text-bold text-grey'>
@@ -55,9 +55,9 @@
   </view>
   <view class="cu-item self">
     <view class="main">
-      <view class='action'>
+      <!-- <view class='action'>
         <text class='icon-locationfill text-orange text-xxl'></text>
-      </view>
+      </view> -->
       <view class='content shadow'>
         喵星球，喵喵市
       </view>
@@ -72,7 +72,7 @@
        @#$^&**
       </view>      
       <view class='action text-grey'>
-        <text class='icon-warnfill text-red text-xxl'></text> <text class='text-sm margin-left-sm'>翻译错误</text> 
+        <text class='icon-warnfill text-red text-xxl'></text> <text class='text-sm margin-left-sm'>无法回答</text> 
       </view>
     </view>
     <view class='date'>13:23</view>
